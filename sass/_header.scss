@@ -1,0 +1,88 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  & h1 {
+    font-weight: 900;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    line-height: 1.5;
+    animation: fadein 2s ease-in-out forwards;
+  }
+  & .divider {
+    height: 3px;
+    width: 200px;
+    background: #999;
+    display: block;
+    margin: 1rem 0;
+    animation: fadein 2.2s ease-in-out forwards;
+  }
+  & .img-box {
+    margin: 1rem 0;
+    height: 20rem;
+    width: 100%;
+    display: block;
+    background: url("imgs/lashes1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    animation: fadeinfromright 2.1s ease-in-out forwards;
+  }
+  & .text-box {
+    animation: fadein 2.2s ease-in-out forwards;
+  }
+}
+@media screen and (max-width: 900px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    & h1 {
+      font-weight: 900;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      line-height: 1.5;
+      animation: fadein 2s ease-in-out forwards;
+    }
+    & .divider {
+      height: 3px;
+      width: 200px;
+      background: #999;
+      display: block;
+      margin: 1rem 0;
+      animation: fadein 2.2s ease-in-out forwards;
+    }
+    & .img-box {
+      margin: 1rem 0;
+      height: 10rem;
+      width: 100%;
+      display: block;
+      background: url("imgs/lashes1.jpg");
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      animation: fadeinfromright 2.1s ease-in-out forwards;
+    }
+  }
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translate3d(-20vw, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0vw, 0, 0);
+  }
+}
+@keyframes fadeinfromright {
+  0% {
+    opacity: 0;
+    transform: translate3d(30vw, 0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate3d(0vw, 0, 0);
+  }
+}

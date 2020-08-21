@@ -1,0 +1,201 @@
+@import url("https://use.typekit.net/bqg4hdi.css");
+.header {
+  display: flex;
+  flex-direction: column;
+  width: 100%; }
+  .header h1 {
+    font-weight: 900;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    line-height: 1.5;
+    animation: fadein 2s ease-in-out forwards; }
+  .header .divider {
+    height: 3px;
+    width: 200px;
+    background: #999;
+    display: block;
+    margin: 1rem 0;
+    animation: fadein 2.2s ease-in-out forwards; }
+  .header .img-box {
+    margin: 1rem 0;
+    height: 20rem;
+    width: 100%;
+    display: block;
+    background: url("imgs/lashes1.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    animation: fadeinfromright 2.1s ease-in-out forwards; }
+  .header .text-box {
+    animation: fadein 2.2s ease-in-out forwards; }
+
+@media screen and (max-width: 900px) {
+  .header {
+    display: flex;
+    flex-direction: column;
+    width: 100%; }
+    .header h1 {
+      font-weight: 900;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      line-height: 1.5;
+      animation: fadein 2s ease-in-out forwards; }
+    .header .divider {
+      height: 3px;
+      width: 200px;
+      background: #999;
+      display: block;
+      margin: 1rem 0;
+      animation: fadein 2.2s ease-in-out forwards; }
+    .header .img-box {
+      margin: 1rem 0;
+      height: 10rem;
+      width: 100%;
+      display: block;
+      background: url("imgs/lashes1.jpg");
+      background-size: cover;
+      background-attachment: fixed;
+      background-position: center;
+      animation: fadeinfromright 2.1s ease-in-out forwards; } }
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translate3d(-20vw, 0, 0); }
+  100% {
+    opacity: 1;
+    transform: translate3d(0vw, 0, 0); } }
+
+@keyframes fadeinfromright {
+  0% {
+    opacity: 0;
+    transform: translate3d(30vw, 0, 0); }
+  100% {
+    opacity: 1;
+    transform: translate3d(0vw, 0, 0); } }
+
+.section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  animation: fadein 2s ease-in-out forwards; }
+  .section .header-text {
+    width: 100%;
+    display: flex;
+    flex-direction: column; }
+    .section .header-text h2 {
+      color: #111;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 1.5rem;
+      max-width: 80%; }
+  .section .img-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 1rem;
+    width: 100%; }
+    .section .img-grid img {
+      max-width: 100%; }
+    .section .img-grid img:nth-child(3) {
+      object-fit: cover;
+      grid-column-start: 1;
+      grid-column-end: 3;
+      max-height: 20rem;
+      width: 100%; }
+
+@media screen and (max-width: 900px) {
+  .section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    animation: fadein 2s ease-in-out forwards; }
+    .section .header-text h2 {
+      color: #111;
+      text-transform: uppercase;
+      font-weight: 900;
+      font-size: 1.2rem;
+      max-width: 100%;
+      margin: 0; }
+    .section .img-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      gap: 1rem;
+      width: 100%;
+      margin-bottom: 2rem; }
+      .section .img-grid img {
+        max-width: 100%; }
+      .section .img-grid img:nth-child(3) {
+        object-fit: cover;
+        grid-column-start: 1;
+        grid-column-end: 1;
+        max-height: unset;
+        width: 100%; } }
+
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    transform: translate3d(-20vw, 0, 0); }
+  100% {
+    opacity: 1;
+    transform: translate3d(0vw, 0, 0); } }
+
+body,
+html {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+p,
+label,
+a {
+  font-family: roboto-condensed, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px; }
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 2rem 4rem; }
+  main .container {
+    min-width: 60vw;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column; }
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 1rem 0; }
+  .text-box p {
+    color: #666;
+    line-height: 1.5;
+    max-width: 80%;
+    font-size: 1.2rem;
+    margin: 0; }
+
+@media screen and (max-width: 900px) {
+  .text-box {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1.5rem 0; }
+    .text-box p {
+      color: #666;
+      line-height: 1.5;
+      max-width: 100%;
+      font-size: 1rem;
+      margin: 0; } }
