@@ -23,3 +23,18 @@
 
   window.addEventListener("scroll", handleScrolling);
 })();
+
+//hamburger menu module
+(() => {
+  const selectors = {
+    menuBtn: document.querySelector(".hamburger"),
+    slideInNav: document.querySelector(".slide-in-nav"),
+  };
+
+  const handleMenuToggle = () => {
+    selectors.slideInNav.classList.toggle("open");
+    console.log("open");
+  };
+
+  selectors.menuBtn.addEventListener("click", () => handleMenuToggle());
+})();

@@ -34,7 +34,7 @@ a {
   font-family: roboto-condensed, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 16px;
+  font-size: 22px;
 }
 
 main {
@@ -82,6 +82,7 @@ main {
     justify-content: flex-start;
     width: 100%;
     padding: 2rem 0;
+    margin-top: 13vh;
     & .container {
       min-width: 60vw;
       max-width: 100%;

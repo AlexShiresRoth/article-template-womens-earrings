@@ -71,6 +71,7 @@
 
 .ad-block {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 2rem;
@@ -79,6 +80,13 @@
   z-index: 111;
   position: relative;
   margin-top: 2rem;
+  & .ad-heading {
+    width: 80%;
+    & h2 {
+      text-transform: uppercase;
+      font-size: 2rem;
+    }
+  }
   & .ad-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(15rem, 17rem));
@@ -114,6 +122,74 @@
         & img {
           max-width: 100%;
         }
+      }
+    }
+  }
+}
+
+.native-ad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  box-shadow: 0 1px 5px #eee;
+  margin: 1rem 0;
+  & a {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    height: 100%;
+    text-decoration: none;
+    & span {
+      background: var(--brand-main);
+      color: #fff;
+      border-radius: 3px;
+      padding: 0.5rem;
+      margin-right: 0.5rem;
+    }
+    & h3,
+    h5,
+    p {
+      margin: 0;
+    }
+    & h3 {
+      font-size: 2rem;
+      color: #111;
+      margin: 0.5rem 0;
+      display: flex;
+      align-items: center;
+    }
+    & h5 {
+      font-size: 1.5rem;
+      text-decoration: underline;
+      color: blue;
+      margin: 0.5rem 0;
+      display: flex;
+      align-items: center;
+    }
+    & p {
+      color: #666;
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+      display: flex;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .ad-right {
+    display: none;
+    visibility: hidden;
+  }
+  .ad-block {
+    & .ad-grid {
+      grid-template-columns: 1fr;
+      justify-items: center;
+      & .ad-grid-col {
+        max-width: 100%;
+        width: 90%;
+        padding: 1rem;
       }
     }
   }
