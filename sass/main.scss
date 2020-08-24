@@ -43,7 +43,7 @@ main {
   align-items: center;
   width: 100%;
   padding: 2rem 0rem;
-  & .container {
+  & .container-cstm {
     min-width: 60vw;
     max-width: 1200px;
     display: grid;
@@ -83,7 +83,7 @@ main {
     width: 100%;
     padding: 2rem 0;
     margin-top: 13vh;
-    & .container {
+    & .container-cstm {
       min-width: 60vw;
       max-width: 100%;
       display: flex;
