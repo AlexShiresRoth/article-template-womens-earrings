@@ -1,7 +1,17 @@
 @import url("https://use.typekit.net/bqg4hdi.css");
 
+@import "./nav";
 @import "./header";
 @import "./body";
+@import "./ad";
+@import "./footer";
+
+:root {
+  --brand-main: #ef41fa;
+  --text-color: #666;
+  --text-dark: #111;
+  --text-medium: "#333";
+}
 
 body,
 html {
@@ -31,13 +41,22 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  padding: 2rem 4rem;
+  width: 100%;
+  padding: 2rem 0rem;
   & .container {
     min-width: 60vw;
-    max-width: 1000px;
-    display: flex;
-    flex-direction: column;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-items: center;
+    gap: 2rem;
+    margin: 6rem 2rem;
+    & a {
+      margin: 2rem 0;
+    }
+    & .inner-container-cstm {
+      min-width: 62vw;
+    }
   }
 }
 
@@ -56,6 +75,23 @@ main {
 }
 
 @media screen and (max-width: 900px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 2rem 0;
+    & .container {
+      min-width: 60vw;
+      max-width: 100%;
+      display: flex;
+      margin: 0 1.5rem;
+      & a {
+        margin: 2rem 0;
+      }
+    }
+  }
   .text-box {
     display: flex;
     flex-direction: column;

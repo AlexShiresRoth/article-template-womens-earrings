@@ -1,0 +1,10 @@
+.footer {
+  display: flex;
+  width: 100%;
+  background: #faf9f9;
+  padding: 2rem;
+  margin-top: 2vh;
+  & a {
+    margin: 2rem;
+  }
+}
