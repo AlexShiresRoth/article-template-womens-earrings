@@ -16,7 +16,7 @@
     color: #666;
     text-transform: uppercase; }
     .menu-desktop a img {
-      max-width: 7rem; }
+      max-width: 10rem; }
   .menu-desktop .nav-left {
     display: flex;
     margin-left: 1rem; }
@@ -49,7 +49,7 @@
     display: none;
     visibility: hidden; }
   .menu-mobile {
-    min-height: 10rem;
+    min-height: 5rem;
     background: #fff;
     display: flex;
     justify-content: space-between;
@@ -67,7 +67,7 @@
       color: #666;
       text-transform: uppercase; }
       .menu-mobile a img {
-        max-width: 7rem; }
+        max-width: 10rem; }
     .menu-mobile .nav-left {
       display: flex;
       margin-left: 1rem;
@@ -138,9 +138,8 @@
     height: 20rem;
     width: 100%;
     display: block;
-    background: url("https://images.clickfunnels.com/16/56de97318d4dac9905403162b762b3/b0aa67018b032e29fb54d32731766d5a-xxlarge.jpg");
+    background: url("https://images.clickfunnels.com/ea/938d73b6c04ac6a946aa797de576e1/debt-help.jpg");
     background-size: cover;
-    background-attachment: fixed;
     background-position: center;
     animation: fadeinfromright 2.1s ease-in-out forwards; }
   .header .text-box {
@@ -425,12 +424,60 @@
 
 .footer {
   display: flex;
+  justify-content: center;
   width: 100%;
   background: #faf9f9;
   padding: 2rem;
   margin-top: 2vh; }
-  .footer a {
-    margin: 2rem; }
+  .footer .footer-container {
+    max-width: 90%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 1rem; }
+    .footer .footer-container .footer-col {
+      display: flex;
+      flex-direction: column; }
+      .footer .footer-container .footer-col .logo {
+        max-width: 10rem; }
+      .footer .footer-container .footer-col a {
+        text-decoration: none;
+        color: #666;
+        transition: all 0.3s ease; }
+        .footer .footer-container .footer-col a:hover {
+          cursor: pointer;
+          color: var(--brand-main); }
+
+@media screen and (max-width: 900px) {
+  .footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: #faf9f9;
+    padding: 2rem;
+    margin-top: 2vh; }
+    .footer .footer-container {
+      max-width: 90%;
+      width: 90%;
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      gap: 1rem; }
+      .footer .footer-container .footer-col {
+        display: flex;
+        flex-direction: column; }
+        .footer .footer-container .footer-col .logo {
+          max-width: 10rem; }
+        .footer .footer-container .footer-col a {
+          text-decoration: none;
+          color: #666;
+          transition: all 0.3s ease;
+          font-size: 1.2rem;
+          text-align: center; }
+          .footer .footer-container .footer-col a:hover {
+            cursor: pointer;
+            color: var(--brand-main); } }
 
 :root {
   --brand-main: #ef41fa;
@@ -465,7 +512,7 @@ main {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 2rem 0rem; }
+  margin-top: 2rem; }
   main .container-cstm {
     min-width: 60vw;
     max-width: 1200px;
@@ -478,6 +525,8 @@ main {
       margin: 2rem 0; }
     main .container-cstm .inner-container-cstm {
       min-width: 62vw; }
+    main .container-cstm .section img {
+      max-width: 100%; }
 
 .text-box {
   display: flex;
@@ -498,8 +547,7 @@ main {
     align-items: center;
     justify-content: flex-start;
     width: 100%;
-    padding: 2rem 0;
-    margin-top: 13vh; }
+    margin-top: 6rem; }
     main .container-cstm {
       min-width: 60vw;
       max-width: 100%;

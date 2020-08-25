@@ -11,7 +11,10 @@
       window.pageYOffset + adCont.getBoundingClientRect().height;
     if (windowDiff > ad.getBoundingClientRect().height) {
       adCont.style.position = "relative";
-      adCont.style.top = "82%";
+      adCont.style.top =
+        ad.getBoundingClientRect().height -
+        adCont.getBoundingClientRect().height +
+        "px";
     }
     if (windowDiff < ad.getBoundingClientRect().height) {
       adCont.style.position = "fixed";

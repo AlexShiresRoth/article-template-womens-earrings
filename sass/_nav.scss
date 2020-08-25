@@ -15,7 +15,7 @@
     color: #666;
     text-transform: uppercase;
     & img {
-      max-width: 7rem;
+      max-width: 10rem;
     }
   }
   & .nav-left {
@@ -58,7 +58,7 @@
     visibility: hidden;
   }
   .menu-mobile {
-    min-height: 10rem;
+    min-height: 5rem;
     background: #fff;
     display: flex;
     justify-content: space-between;
@@ -76,7 +76,7 @@
       color: #666;
       text-transform: uppercase;
       & img {
-        max-width: 7rem;
+        max-width: 10rem;
       }
     }
     & .nav-left {

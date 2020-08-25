@@ -1,10 +1,69 @@
 .footer {
   display: flex;
+  justify-content: center;
   width: 100%;
   background: #faf9f9;
   padding: 2rem;
   margin-top: 2vh;
-  & a {
-    margin: 2rem;
+  & .footer-container {
+    max-width: 90%;
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 1rem;
+    & .footer-col {
+      display: flex;
+      flex-direction: column;
+      & .logo {
+        max-width: 10rem;
+      }
+      & a {
+        text-decoration: none;
+        color: #666;
+        transition: all 0.3s ease;
+        &:hover {
+          cursor: pointer;
+          color: var(--brand-main);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: #faf9f9;
+    padding: 2rem;
+    margin-top: 2vh;
+    & .footer-container {
+      max-width: 90%;
+      width: 90%;
+      display: grid;
+      grid-template-columns: 1fr;
+      justify-items: center;
+      gap: 1rem;
+      & .footer-col {
+        display: flex;
+        flex-direction: column;
+        & .logo {
+          max-width: 10rem;
+        }
+        & a {
+          text-decoration: none;
+          color: #666;
+          transition: all 0.3s ease;
+          font-size: 1.2rem;
+          text-align: center;
+          &:hover {
+            cursor: pointer;
+            color: var(--brand-main);
+          }
+        }
+      }
+    }
   }
 }
