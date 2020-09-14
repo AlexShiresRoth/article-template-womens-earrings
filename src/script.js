@@ -39,3 +39,22 @@
 
   selectors.menuBtn.addEventListener("click", () => handleMenuToggle());
 })();
+
+(() => {
+  const selectors = {
+    nav: document.querySelector(".menu-desktop"),
+    navTitle: document.querySelector(".page-desc"),
+  };
+
+  const handleNavScrolling = () => {
+    if (window !== undefined && window.pageYOffset > 0) {
+      selectors.nav.style.minHeight = "0";
+      selectors.navTitle.style.margin = "0";
+    } else {
+      selectors.nav.style.minHeight = "5rem";
+      selectors.navTitle.style.margin = ".5rem 0";
+    }
+  };
+
+  window.addEventListener("scroll", () => handleNavScrolling());
+})();

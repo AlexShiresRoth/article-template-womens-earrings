@@ -8,6 +8,7 @@
 
 :root {
   --brand-main: #ef41fa;
+  --nav-color: rgb(52, 74, 95);
   --text-color: #666;
   --text-dark: #111;
   --text-medium: "#333";
@@ -30,6 +31,7 @@ h6,
 span,
 p,
 label,
+li,
 a {
   font-family: roboto-condensed, sans-serif;
   font-weight: 400;

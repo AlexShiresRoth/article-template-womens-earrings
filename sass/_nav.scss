@@ -2,14 +2,16 @@
   min-height: 7rem;
   background: #fff;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0px 1px 10px #eee;
+  border-bottom: 1px solid #eee;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 9999999;
+  transition: all 0.5s ease;
   & a {
     text-decoration: none;
     color: #666;
@@ -18,30 +20,56 @@
       max-width: 10rem;
     }
   }
-  & .nav-left {
+  & .nav-upper {
+    background: var(--nav-color);
+    width: 100%;
     display: flex;
-    margin-left: 1rem;
-  }
-  & .nav-right {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    justify-items: center;
-    gap: 1rem;
-    margin-right: 1rem;
-    & a {
-      transition: all 0.3s ease;
-      &::after {
-        display: block;
-        content: "";
-        background: var(--brand-main);
-        height: 3px;
-        width: 0px;
-        transition: all 0.3s ease;
+    justify-content: center;
+    & .upper-inner {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      & p {
+        color: #fff;
+        transition: all 0.5s ease;
       }
-      &:hover {
-        color: var(--brand-main);
-        &::after {
-          width: 100%;
+    }
+  }
+  & .nav-lower {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    & .lower-inner {
+      width: 90%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & .nav-left {
+        display: flex;
+        margin-left: 1rem;
+      }
+      & .nav-right {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+        gap: 1rem;
+        margin-right: 1rem;
+        & a {
+          transition: all 0.3s ease;
+          &::after {
+            display: block;
+            content: "";
+            background: var(--nav-color);
+            height: 3px;
+            width: 0px;
+            transition: all 0.3s ease;
+          }
+          &:hover {
+            color: var(--nav-color);
+            &::after {
+              width: 100%;
+            }
+          }
         }
       }
     }
