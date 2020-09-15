@@ -11,25 +11,113 @@
       color: #111;
       text-transform: uppercase;
       font-weight: 900;
-      font-size: 1.5rem;
+      font-size: 2.2rem;
       max-width: 80%;
+    }
+  }
+  & a {
+    width: 100%;
+    & button {
+      width: 100%;
+      padding: 2rem;
+      background: var(--brand-main);
+      border: 0;
+      border-radius: 3px;
+      box-shadow: 0 1px 10px var(--brand-main);
+      transition: all 0.3s ease;
+      font-size: 1.8rem;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 700;
+      &:hover {
+        cursor: pointer;
+        box-shadow: 0 0 0;
+      }
     }
   }
   & .img-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
-    gap: 1rem;
     width: 100%;
+    border: 1px solid #eee;
+    border-radius: 3px;
     & img {
       max-width: 100%;
+      border: 1px solid #eee;
     }
     & img:nth-child(3) {
       object-fit: cover;
       grid-column-start: 1;
       grid-column-end: 3;
-      max-height: 20rem;
+      max-height: 30rem;
       width: 100%;
+    }
+  }
+  & .pro-con-list {
+    background: url("https://images.unsplash.com/photo-1456324504439-367cee3b3c32?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2400&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+    padding: 2rem 0;
+    border-radius: 3px;
+    position: relative;
+    filter: grayscale(25%);
+    & .overlay {
+      height: 100%;
+      width: 100%;
+      background: rgba(17, 17, 17, 0.377);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+    & .pro-col {
+      display: flex;
+      flex-direction: column;
+      background: rgba(0, 201, 0, 0.384);
+      & .pro-header {
+        width: 100%;
+        z-index: 1;
+        border-bottom: 2px solid #eee;
+        & h3 {
+          margin-left: 2rem;
+          text-transform: uppercase;
+          font-weight: 700;
+          color: #fff;
+          z-index: 1;
+        }
+      }
+    }
+    & .con-col {
+      display: flex;
+      flex-direction: column;
+      background: rgba(221, 39, 39, 0.384);
+      & .con-header {
+        width: 100%;
+        z-index: 1;
+        border-bottom: 2px solid #eee;
+        & h3 {
+          margin-left: 2rem;
+          text-transform: uppercase;
+          font-weight: 700;
+          color: #fff;
+          z-index: 1;
+        }
+      }
+    }
+    & .pro-list,
+    & .con-list {
+      margin: 1rem 0;
+      z-index: 1;
+      & li {
+        list-style: none;
+        color: #fff;
+        margin: 1rem 0;
+      }
     }
   }
 }

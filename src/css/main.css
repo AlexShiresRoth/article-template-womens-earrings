@@ -30,7 +30,8 @@
       justify-content: space-between; }
       .menu-desktop .nav-upper .upper-inner p {
         color: #fff;
-        transition: all 0.5s ease; }
+        transition: all 0.5s ease;
+        margin: 0; }
   .menu-desktop .nav-lower {
     display: flex;
     justify-content: center;
@@ -41,8 +42,7 @@
       justify-content: space-between;
       align-items: center; }
       .menu-desktop .nav-lower .lower-inner .nav-left {
-        display: flex;
-        margin-left: 1rem; }
+        display: flex; }
       .menu-desktop .nav-lower .lower-inner .nav-right {
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -50,7 +50,8 @@
         gap: 1rem;
         margin-right: 1rem; }
         .menu-desktop .nav-lower .lower-inner .nav-right a {
-          transition: all 0.3s ease; }
+          transition: all 0.3s ease;
+          font-size: 1.3rem; }
           .menu-desktop .nav-lower .lower-inner .nav-right a::after {
             display: block;
             content: "";
@@ -143,13 +144,14 @@
   display: flex;
   flex-direction: column;
   width: 100%; }
-  .header ul {
+  .header .list {
     display: flex;
     align-items: center;
     padding: 0; }
-    .header ul a {
-      text-decoration: none; }
-    .header ul li {
+    .header .list a {
+      text-decoration: none;
+      margin: 1rem 0; }
+    .header .list li {
       list-style: none;
       color: #666;
       font-size: 0.9rem;
@@ -172,7 +174,7 @@
     height: 20rem;
     width: 100%;
     display: block;
-    background: url("https://images.clickfunnels.com/ea/938d73b6c04ac6a946aa797de576e1/debt-help.jpg");
+    background: url("https://images.clickfunnels.com/5a/76a93aeb1f49c1a3f6f017780a0647/womens-banner.jpg");
     background-size: cover;
     background-position: center;
     animation: fadeinfromright 2.1s ease-in-out forwards; }
@@ -180,11 +182,11 @@
     animation: fadein 2.2s ease-in-out forwards; }
   .header .header-description {
     background: #eee;
-    padding: 1rem;
+    padding: 2rem 1rem;
     color: #666;
     border-radius: 3px;
     font-style: italic;
-    font-size: 0.9rem; }
+    font-size: 1.5rem; }
   .header .social-links {
     display: flex;
     align-items: center; }
@@ -224,11 +226,12 @@
       animation: fadein 2.2s ease-in-out forwards; }
     .header .img-box {
       margin: 1rem 0;
-      height: 10rem;
+      height: 15rem;
       width: 100%;
       display: block;
       background-size: cover;
-      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-attachment: none;
       background-position: center;
       animation: fadeinfromright 2.1s ease-in-out forwards; } }
 
@@ -261,22 +264,98 @@
       color: #111;
       text-transform: uppercase;
       font-weight: 900;
-      font-size: 1.5rem;
+      font-size: 2.2rem;
       max-width: 80%; }
+  .section a {
+    width: 100%; }
+    .section a button {
+      width: 100%;
+      padding: 2rem;
+      background: var(--brand-main);
+      border: 0;
+      border-radius: 3px;
+      box-shadow: 0 1px 10px var(--brand-main);
+      transition: all 0.3s ease;
+      font-size: 1.8rem;
+      color: #fff;
+      text-transform: uppercase;
+      font-weight: 700; }
+      .section a button:hover {
+        cursor: pointer;
+        box-shadow: 0 0 0; }
   .section .img-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, auto);
-    gap: 1rem;
-    width: 100%; }
+    width: 100%;
+    border: 1px solid #eee;
+    border-radius: 3px; }
     .section .img-grid img {
-      max-width: 100%; }
+      max-width: 100%;
+      border: 1px solid #eee; }
     .section .img-grid img:nth-child(3) {
       object-fit: cover;
       grid-column-start: 1;
       grid-column-end: 3;
-      max-height: 20rem;
+      max-height: 30rem;
       width: 100%; }
+  .section .pro-con-list {
+    background: url("https://images.unsplash.com/photo-1456324504439-367cee3b3c32?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2400&q=80");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #eee;
+    padding: 2rem 0;
+    border-radius: 3px;
+    position: relative;
+    filter: grayscale(25%); }
+    .section .pro-con-list .overlay {
+      height: 100%;
+      width: 100%;
+      background: rgba(17, 17, 17, 0.377);
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0; }
+    .section .pro-con-list .pro-col {
+      display: flex;
+      flex-direction: column;
+      background: rgba(0, 201, 0, 0.384); }
+      .section .pro-con-list .pro-col .pro-header {
+        width: 100%;
+        z-index: 1;
+        border-bottom: 2px solid #eee; }
+        .section .pro-con-list .pro-col .pro-header h3 {
+          margin-left: 2rem;
+          text-transform: uppercase;
+          font-weight: 700;
+          color: #fff;
+          z-index: 1; }
+    .section .pro-con-list .con-col {
+      display: flex;
+      flex-direction: column;
+      background: rgba(221, 39, 39, 0.384); }
+      .section .pro-con-list .con-col .con-header {
+        width: 100%;
+        z-index: 1;
+        border-bottom: 2px solid #eee; }
+        .section .pro-con-list .con-col .con-header h3 {
+          margin-left: 2rem;
+          text-transform: uppercase;
+          font-weight: 700;
+          color: #fff;
+          z-index: 1; }
+    .section .pro-con-list .pro-list,
+    .section .pro-con-list .con-list {
+      margin: 1rem 0;
+      z-index: 1; }
+      .section .pro-con-list .pro-list li,
+      .section .pro-con-list .con-list li {
+        list-style: none;
+        color: #fff;
+        margin: 1rem 0; }
 
 @media screen and (max-width: 900px) {
   .section {
@@ -315,6 +394,117 @@
     opacity: 1;
     transform: translate3d(0vw, 0, 0); } }
 
+.user-reviews {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border: 1px solid #eee;
+  border-radius: 3px; }
+  .user-reviews .reviews-inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%; }
+    .user-reviews .reviews-inner .col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      gap: 1rem;
+      width: 100%; }
+      .user-reviews .reviews-inner .col .rating {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #eee;
+        width: 100%; }
+        .user-reviews .reviews-inner .col .rating .stars i {
+          color: gold; }
+      .user-reviews .reviews-inner .col .text {
+        display: flex;
+        flex-direction: column; }
+        .user-reviews .reviews-inner .col .text h2 {
+          font-weight: 700;
+          text-transform: uppercase; }
+        .user-reviews .reviews-inner .col .text p {
+          max-width: 90%;
+          font-size: 1.2rem;
+          color: #666; }
+      .user-reviews .reviews-inner .col .graph {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        width: 95%;
+        grid-column-start: 1;
+        grid-column-end: 3; }
+        .user-reviews .reviews-inner .col .graph .bar {
+          width: 100%;
+          display: flex;
+          border-radius: 3px;
+          background: #eee;
+          border: 1px solid var(--brand-main);
+          height: 2.5rem; }
+          .user-reviews .reviews-inner .col .graph .bar .inner {
+            width: 82%;
+            background: var(--brand-main);
+            box-shadow: 0 1px 5px var(--brand-main);
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-top-left-radius: 3px;
+            border-bottom-left-radius: 3px; }
+            .user-reviews .reviews-inner .col .graph .bar .inner span {
+              color: #fff;
+              font-size: 1.1rem; }
+
+@media screen and (max-width: 900px) {
+  .user-reviews {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border: 1px solid #eee;
+    border-radius: 3px; }
+    .user-reviews .reviews-inner {
+      display: grid;
+      grid-template-columns: 1fr;
+      width: 100%; }
+      .user-reviews .reviews-inner .col {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        gap: 1rem;
+        width: 100%; }
+        .user-reviews .reviews-inner .col .rating .stars i {
+          color: gold; }
+        .user-reviews .reviews-inner .col .text {
+          display: flex;
+          flex-direction: column;
+          align-items: center; }
+          .user-reviews .reviews-inner .col .text h2 {
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center; }
+          .user-reviews .reviews-inner .col .text p {
+            max-width: 90%;
+            font-size: 1.2rem;
+            color: #666;
+            text-align: center; }
+        .user-reviews .reviews-inner .col .graph {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          height: 100%;
+          width: 95%;
+          grid-column-start: 1;
+          grid-column-end: 3; }
+          .user-reviews .reviews-inner .col .graph .bar {
+            width: 100%;
+            display: flex;
+            border-radius: 3px;
+            background: #eee;
+            margin: 1rem 0; } }
+
 .ad-right {
   margin-top: 1rem;
   display: flex;
@@ -343,23 +533,49 @@
       align-items: center;
       width: 100%;
       text-decoration: none; }
+      .ad-right .ad-container a p {
+        font-size: 1.5rem;
+        margin: 0.5rem 0; }
+      .ad-right .ad-container a h5 {
+        font-size: 1.7rem;
+        margin: 0.5rem 0;
+        color: #333; }
       .ad-right .ad-container a .tweet-reviews {
         display: grid;
         grid-template-columns: 1fr;
         gap: 0.2rem; }
         .ad-right .ad-container a .tweet-reviews .tweet {
-          display: flex;
-          background: #fbfbfb;
+          display: grid;
+          grid-template-columns: repeat(2, auto);
+          align-items: center;
           border: 1px solid #eee;
-          border-radius: 3px; }
-          .ad-right .ad-container a .tweet-reviews .tweet .name-and-text h6 {
-            font-weight: 700;
-            color: #222;
-            margin: 0; }
-          .ad-right .ad-container a .tweet-reviews .tweet .name-and-text p {
-            margin: 0;
-            color: #666;
-            text-align: start; }
+          border-radius: 3px;
+          padding: 0.5rem; }
+          .ad-right .ad-container a .tweet-reviews .tweet .img-container {
+            width: 5rem;
+            display: block;
+            max-width: 3rem; }
+            .ad-right .ad-container a .tweet-reviews .tweet .img-container img {
+              width: 100%;
+              border-radius: 50%; }
+          .ad-right .ad-container a .tweet-reviews .tweet .name-and-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center; }
+            .ad-right .ad-container a .tweet-reviews .tweet .name-and-text h6 {
+              font-weight: 700;
+              color: #222;
+              margin: 0;
+              font-size: 1.2rem; }
+            .ad-right .ad-container a .tweet-reviews .tweet .name-and-text span {
+              font-size: 1rem;
+              color: #555;
+              margin: 0.2rem 0; }
+            .ad-right .ad-container a .tweet-reviews .tweet .name-and-text p {
+              margin: 0.5rem 0;
+              color: #666;
+              text-align: start;
+              font-size: 1rem; }
     .ad-right .ad-container h2 {
       text-transform: uppercase;
       font-weight: 800;
@@ -381,57 +597,63 @@
       text-align: center; }
     .ad-right .ad-container button {
       width: 100%;
-      height: 3rem;
+      min-height: 4rem;
       background: var(--brand-main);
       color: #fff;
       border: 0;
       border-radius: 3px;
       font-weight: 700;
       font-size: 1.2rem;
-      transition: all 0.3s ease; }
+      transition: all 0.3s ease;
+      box-shadow: 0px 1px 10px var(--brand-main); }
       .ad-right .ad-container button:hover {
         cursor: pointer;
-        box-shadow: 0px 1px 10px var(--brand-main); }
+        box-shadow: 0px 0 0; }
+    .ad-right .ad-container .ad-image {
+      width: 100%;
+      display: block; }
+      .ad-right .ad-container .ad-image img {
+        max-width: 100%;
+        width: 100%; }
 
 .ad-block {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
   background: #eee;
   width: 100%;
   z-index: 111;
   position: relative;
   margin-top: 2rem; }
-  .ad-block .ad-heading {
-    width: 80%; }
-    .ad-block .ad-heading h2 {
-      text-transform: uppercase;
-      font-size: 2rem; }
   .ad-block .ad-grid {
     display: grid;
-    grid-template-columns: repeat(3, minmax(15rem, 17rem));
+    grid-template-columns: repeat(3, 1fr);
     justify-items: start;
-    gap: 1rem;
-    width: 80%; }
+    width: 100%; }
     .ad-block .ad-grid .ad-grid-col {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      max-width: 15rem;
       background: #fff;
-      padding: 1rem;
-      transition: all 0.3s ease; }
-      .ad-block .ad-grid .ad-grid-col:hover {
-        box-shadow: 0 1px 20px #e1e1e1;
-        transform: scale(1.05); }
+      transition: all 0.3s ease;
+      overflow: hidden;
+      width: 100%; }
       .ad-block .ad-grid .ad-grid-col a {
         display: flex;
         flex-direction: column;
-        justify-content: space-between;
+        align-items: center;
+        justify-content: center;
+        min-height: 40vh;
         height: 100%;
-        text-decoration: none; }
+        text-decoration: none;
+        width: 100%;
+        overflow: hidden;
+        position: relative; }
+        .ad-block .ad-grid .ad-grid-col a:hover img {
+          box-shadow: 0 1px 20px #e1e1e1;
+          transform: scale(1.05);
+          filter: grayscale(0) blur(0); }
         .ad-block .ad-grid .ad-grid-col a p {
           border-top: 1px solid #eee;
           padding-top: 1rem;
@@ -440,7 +662,33 @@
           color: var(--brand-main);
           font-weight: 800; }
         .ad-block .ad-grid .ad-grid-col a img {
-          max-width: 100%; }
+          display: block;
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          transition: all 0.3s ease;
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 0;
+          filter: grayscale(70%) blur(1px); }
+          .ad-block .ad-grid .ad-grid-col a img:hover {
+            box-shadow: 0 1px 20px #e1e1e1;
+            transform: scale(1.05);
+            filter: grayscale(0) blur(0); }
+        .ad-block .ad-grid .ad-grid-col a button {
+          z-index: 2;
+          background: transparent;
+          color: #fff;
+          text-transform: uppercase;
+          font-size: 2rem;
+          padding: 1rem;
+          border: 3px solid #eee;
+          transition: all 0.3s ease; }
+          .ad-block .ad-grid .ad-grid-col a button:hover {
+            cursor: pointer;
+            background: #fff;
+            color: var(--brand-main); }
 
 .native-ad {
   display: flex;
@@ -501,7 +749,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  background: #faf9f9;
+  border-top: 1px solid #eee;
   padding: 2rem;
   margin-top: 2vh; }
   .footer .footer-container {
@@ -529,8 +777,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    background: #faf9f9;
-    padding: 2rem;
+    padding: 2rem 0;
     margin-top: 2vh; }
     .footer .footer-container {
       max-width: 90%;
@@ -555,8 +802,9 @@
             color: var(--brand-main); } }
 
 :root {
-  --brand-main: #ef41fa;
-  --nav-color: rgb(52, 74, 95);
+  --brand-main: #ff00ed;
+  --brand-main-faded: #ff00ee27;
+  --nav-color: #ff00ed;
   --text-color: #666;
   --text-dark: #111;
   --text-medium: "#333"; }
@@ -592,6 +840,7 @@ main {
   margin-top: 2rem; }
   main .container-cstm {
     min-width: 60vw;
+    width: 90%;
     max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -614,8 +863,17 @@ main {
     color: #666;
     line-height: 1.5;
     max-width: 80%;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     margin: 0; }
+
+.tldr {
+  background: var(--brand-main-faded);
+  border-radius: 3px; }
+  .tldr p {
+    margin: 1rem; }
+    .tldr p strong {
+      color: var(--brand-main);
+      font-weight: 700; }
 
 @media screen and (max-width: 900px) {
   main {

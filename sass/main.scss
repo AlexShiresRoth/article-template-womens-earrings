@@ -3,12 +3,14 @@
 @import "./nav";
 @import "./header";
 @import "./body";
+@import "./reviews-section";
 @import "./ad";
 @import "./footer";
 
 :root {
-  --brand-main: #ef41fa;
-  --nav-color: rgb(52, 74, 95);
+  --brand-main: #ff00ed;
+  --brand-main-faded: #ff00ee27;
+  --nav-color: #ff00ed;
   --text-color: #666;
   --text-dark: #111;
   --text-medium: "#333";
@@ -47,6 +49,7 @@ main {
   margin-top: 2rem;
   & .container-cstm {
     min-width: 60vw;
+    width: 90%;
     max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(2, auto);
@@ -76,8 +79,19 @@ main {
     color: #666;
     line-height: 1.5;
     max-width: 80%;
-    font-size: 1.2rem;
+    font-size: 1.8rem;
     margin: 0;
+  }
+}
+.tldr {
+  background: var(--brand-main-faded);
+  border-radius: 3px;
+  & p {
+    margin: 1rem;
+    & strong {
+      color: var(--brand-main);
+      font-weight: 700;
+    }
   }
 }
 

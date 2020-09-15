@@ -18,7 +18,7 @@
     }
     if (windowDiff < ad.getBoundingClientRect().height) {
       adCont.style.position = "fixed";
-      adCont.style.top = "15%";
+      adCont.style.top = "10%";
     }
   };
 
@@ -52,7 +52,7 @@
       selectors.navTitle.style.margin = "0";
     } else {
       selectors.nav.style.minHeight = "5rem";
-      selectors.navTitle.style.margin = ".5rem 0";
+      selectors.navTitle.style.margin = "1rem 0";
     }
   };
 

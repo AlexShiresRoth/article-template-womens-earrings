@@ -2,12 +2,13 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  & ul {
+  & .list {
     display: flex;
     align-items: center;
     padding: 0;
     & a {
       text-decoration: none;
+      margin: 1rem 0;
     }
     & li {
       list-style: none;
@@ -36,7 +37,7 @@
     height: 20rem;
     width: 100%;
     display: block;
-    background: url("https://images.clickfunnels.com/ea/938d73b6c04ac6a946aa797de576e1/debt-help.jpg");
+    background: url("https://images.clickfunnels.com/5a/76a93aeb1f49c1a3f6f017780a0647/womens-banner.jpg");
     background-size: cover;
     background-position: center;
     animation: fadeinfromright 2.1s ease-in-out forwards;
@@ -46,11 +47,11 @@
   }
   & .header-description {
     background: #eee;
-    padding: 1rem;
+    padding: 2rem 1rem;
     color: #666;
     border-radius: 3px;
     font-style: italic;
-    font-size: 0.9rem;
+    font-size: 1.5rem;
   }
   & .social-links {
     display: flex;
@@ -115,11 +116,12 @@
     }
     & .img-box {
       margin: 1rem 0;
-      height: 10rem;
+      height: 15rem;
       width: 100%;
       display: block;
       background-size: cover;
-      background-attachment: fixed;
+      background-repeat: no-repeat;
+      background-attachment: none;
       background-position: center;
       animation: fadeinfromright 2.1s ease-in-out forwards;
     }

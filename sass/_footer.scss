@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  background: #faf9f9;
+  border-top: 1px solid #eee;
   padding: 2rem;
   margin-top: 2vh;
   & .footer-container {
@@ -36,8 +36,7 @@
     display: flex;
     justify-content: center;
     width: 100%;
-    background: #faf9f9;
-    padding: 2rem;
+    padding: 2rem 0;
     margin-top: 2vh;
     & .footer-container {
       max-width: 90%;
